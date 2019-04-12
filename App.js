@@ -1,4 +1,5 @@
 // Dimensions, mapview, screens, react navigation, facebook login
+// redux, geo2zip, json to query string (qs), sending callbacks to action creators
 
 import React from 'react';
 import {
