@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Button, ScrollView, Linking, Platform } from 'react-native';
-import { MapView } from 'expo'
-import { Card } from 'react-native-elements'
+import { View, Text, Button, ScrollView, Linking } from 'react-native';
+import { MapView } from 'expo';
+import { Card } from 'react-native-elements';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -9,15 +9,14 @@ class ReviewScreen extends Component {
 
   static navigationOptions = ({ navigation, navigationOptions }) => {
     const { routeName } = navigation.state;
-    console.log({ navOptions: navigationOptions });
     return {
-        headerTitle: 'Review Jobs',
-        headerRight: (
-          <Button
-            title="Settings"
-            onPress={() => navigation.navigate('settings') }
-          />
-        )
+      headerTitle: 'Review Jobs',
+      headerRight: (
+        <Button
+          title="Settings"
+          onPress={() => navigation.navigate('settings')}
+        />
+      ),
     };
   };
 
@@ -61,7 +60,7 @@ class ReviewScreen extends Component {
         
       );
     });
-  };
+  }
 
   render() {
     return (
