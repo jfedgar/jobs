@@ -1,6 +1,7 @@
 // Dimensions, mapview, screens, react navigation, facebook login
 // redux, geo2zip, json to query string (qs), sending callbacks to action creators
 // offline data persistence, redux persist (and redux persist migrate), push notifications
+// redux dev tools with react native debugger
 
 import React from 'react';
 import { Notifications } from 'expo';

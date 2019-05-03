@@ -5,11 +5,14 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
 import reducers from '../reducers';
 
+// this is for redux devtools, we use this in place of 'compose' when applying other middleware to the store
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 // second argument is default state for the application
 const store = createStore(
   reducers,
   {},
-  compose(
+  composeEnhancers(
     applyMiddleware(thunk),
     autoRehydrate()
   )
